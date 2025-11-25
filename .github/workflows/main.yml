@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:["**"]
+  pullrequest:
+    branches:["**"]
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout
+      - uses: actions/setup-python
+      - run: python -m unittest discover -p "*tests.py"
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout
+      - uses: actions/setup-python
+      - run: python -m unittest discover -p "*tests.py"
