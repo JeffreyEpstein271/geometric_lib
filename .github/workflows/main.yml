@@ -1,8 +1,8 @@
 on:
   push:
-    branches:["**"]
+    branches: ["**"]
   pullrequest:
-    branches:["**"]
+    branches: ["**"]
 jobs:
   ubuntu:
     runs-on: ubuntu-latest
